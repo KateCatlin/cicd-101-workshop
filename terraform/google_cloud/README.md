@@ -31,7 +31,7 @@ In a terminal run:
 
 Now you'll have to change some values in the `main.tf` file. Next you'll change some values in the terraform variable values to match your information.
 
-```
+```HCL
 variable "project_name" {
   type = "string"
   default = "cicd-workshops"
@@ -40,7 +40,7 @@ variable "project_name" {
 
 Change the *default* value to the project name you created earlier
 
-```
+```HCL
 variable "docker_declaration" {
   type = "string"
   # Change the image: string to match the Docker image you want to use
