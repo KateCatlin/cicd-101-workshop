@@ -22,7 +22,7 @@ jobs:
       - run:
           name: Build and push Docker image
           command: |
-            pyinstaller -F hello_world.py
+            ~/.local/bin/pyinstaller -F hello_world.py
             docker build -t $DOCKER_LOGIN/$IMAGE_NAME -t $DOCKER_LOGIN/$IMAGE_NAME:$TAG .
             echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
             docker push $DOCKER_LOGIN/$IMAGE_NAME
