@@ -12,7 +12,7 @@ jobs:
           command: |
             echo 'export TAG=0.1.${CIRCLE_BUILD_NUM}' >> $BASH_ENV
             echo 'export IMAGE_NAME=cicd-101-workshop' >> $BASH_ENV
-            pip install --upgrade pip==18.0.0
+            pip install --user --upgrade pip==18.0.0
             pip install --user --no-cache-dir -r requirements.txt            
       - run:
           name: Run Tests
