@@ -30,9 +30,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install -r requirements.txt
+            pip install --user --no-cache-dir -r requirements.txt
 
       - save_cache:
           paths: 
